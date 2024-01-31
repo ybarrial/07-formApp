@@ -13,7 +13,6 @@ export class RegisterPageComponent {
   myForm: FormGroup = this.fb.group({
     name: ['', [ Validators.required, Validators.pattern( this.validatorsService.firstNameAndLastnamePattern )  ]],
     // email: ['', [ Validators.required, Validators.pattern( this.validatorsService.emailPattern )], [ new EmailValidator() ]],
-    //email: ['', [ Validators.required, Validators.pattern( this.validatorsService.emailPattern )], [ this.emailValidator ]],
     email: ['', [ Validators.required, Validators.pattern( this.validatorsService.emailPattern )]],
     username: ['', [ Validators.required, this.validatorsService.cantBeStrider ]],
     password: ['', [ Validators.required, Validators.minLength(6) ]],
